@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Descomplica a Vida",
+  "version": "0.1",
+  "description": "Essa extensão trata diretamente o request das respostas da faculdade descomplica. Ela foi feita somente para fins educativos, não utlizar para colar",
+  "permissions": [
+    "webRequest",
+    "storage",
+    "activeTab",
+    "cookies",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.descomplica.com.br/*",
+    "https://*.pegasus-pepe-legal.prd.us.descomplica.io/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
