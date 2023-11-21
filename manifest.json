@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Descomplica a Vida",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Essa extensão trata diretamente o request das respostas da faculdade descomplica. Ela foi feita somente para fins educativos, não utlizar para colar",
   "permissions": [
     "webRequest",
