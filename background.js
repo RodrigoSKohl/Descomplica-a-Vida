@@ -22,12 +22,11 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   ["requestHeaders"]
 );
 //Funçao de background que recupera o Payload salvo localmente para ficar disponivel na chamada de popup.js
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(request, _, sendResponse) {
   if (request === "getLastRequestPart") {
     // Recupere os dados do armazenamento local
     chrome.storage.local.get(['lastUrlPartWithAssertions'], function(result) {
       sendResponse({ urlPart: result.lastUrlPartWithAssertions });
-      // Certifique-se de chamar sendResponse imediatamente dentro deste bloco de callback
     });
     return true; // Manter a porta de mensagem aberta até que a resposta seja enviada
   }

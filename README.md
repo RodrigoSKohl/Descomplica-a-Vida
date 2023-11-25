@@ -1,7 +1,7 @@
 # Descomplica-a-Vida
 ***Extensão somente usada para fins educativos. Não utilize para colar***
 
-![image](https://github.com/RodrigoSKohl/Descomplica-a-Vida/assets/107029851/d51a361c-08a3-4cc6-9a85-d0bf05e92161)
+![image](https://github.com/RodrigoSKohl/Descomplica-a-Vida/assets/107029851/63d02edf-18a7-46a7-88fd-30dd6a13cc75)
 
 
 ## Instalação
@@ -18,13 +18,19 @@
 
 
 #
+### Versão 0.3
+- Removidas varáveis que não estavam mais sendo usadas(esqueci de remover na versão anterior);
+- Omitidas entradas de função sem uso;
+- Adicionada variavel para document.createElement('div') ao inves de chamar no loop de displayAnswers;
+- Melhorias na UI do popup.html;
+- Realizada mudança na lógica do tratamento dos erros, antes erro de API era tratado primieiro que erro do Token, porém para executar o método get para a API é necessário que o token já tenha sido capturado. A lógica de erros ficou assim: TOKEN -> PAYLOAD -> API. Primeiramente o token é capturado, logo após se faz a verificação se o Payload ja foi capturado pelo script de background, se nao foi é realizado um refresh na popup até a captura, após a captura é mandado o metodo GET para a API.
 ### Versão 0.2
 - Adicionado cache que salva o payload caputarado pelo service worker background.js;
 - Corrigido problema que não atualizava questões ao clicar na extensão quando ela estava capturando o payload;
 - Adicionado feature onde a extensão só habilita no dominio da descomplica.
 ### Versão 0.1
 - Criada extensão que captura o payload das questões das aulas da descomplica(ultimo request da URL de API), alem do token do usuario via cookies e envia um get para a API, retornando as respostas;
-- A extensão visa se utilizar de uma falha do sistema(EXPLOIT) de perguntas da faculdade descomplica, onde é retornado o objeto contedo todas alternativas não enumeradas, porém em forma sequencial, o que facilita a descoberta da resposta correta.
+- A extensão visa se utilizar de uma falha do sistema(EXPLOIT) de perguntas da faculdade descomplica, onde é retornado o objeto contedo todas alternativas não enumeradas, porém em forma sequencial, o que facilita a descoberta da resposta correta. Como uma validaçao é dependente da outra, foi-se usada uma unica variavel para tratar os erros.
 #
 #### Compatibilidade
 `Google Chrome Browser 64 bits`

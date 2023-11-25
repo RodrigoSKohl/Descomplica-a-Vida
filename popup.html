@@ -4,30 +4,50 @@
     <meta charset="UTF-8">
     <title>Popup</title>
     <style>
-      /* Estilos para os elementos e o contêiner */
-      #popupContent {
-        width: 160px;
-        height: 240px;
-        border: 1px solid #000000;
-        background-color: #01DE8A;
-        padding: 10px;
-        margin-bottom: 10px;
-        overflow-y: auto;
-      }
+/* Estilos para os elementos e o contêiner */
+#popupContent {
+  font-family: monospace;
+  align-items: left;
+  width: 150px;
+  height: auto;
+  border: 1px solid #000000;
+  background-color: #01DE8A;
+  padding: 5px;
+  overflow-y: auto;
+}
 
-      /* Estilos para os elementos internos */
-      #answers, #tokenDiv, #apiDiv {
-        margin-bottom: 10px;
-      }
+/* Estilos para os elementos internos */
+#gitDiv {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: medium;
+}
+
+#answers {
+  margin-bottom: 5px;
+  font-size: large;
+  line-height: 130%;
+}
+
+#tokenDiv, #apiDiv, #getDiv {
+  font-size: small;
+  display: inline;
+}
+
+#versao {
+  text-align: right;
+  font-size: x-small;
+}
     </style>
   </head>
   <body>
     <div id="popupContent">
+      <div id="gitDiv"><a id="githubLink" href="#">★ FAVORITE A REPO ★</a></div>
       <div id="answers"></div>
       <div id="tokenDiv"></div>
       <div id="apiDiv"></div>
-	  <br>
-	 <div><p>Extensão feita para fins de estudo. Não esqueça de deixar uma ★ no meu <a id="githubLink" href="#">Github</a></p></div>
+      <div id="getDiv"></div>
+      <div id="versao"></div>
     </div>
     <script src="popup.js"></script>
   </body>
