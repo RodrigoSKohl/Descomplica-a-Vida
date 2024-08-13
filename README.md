@@ -18,7 +18,7 @@
 ![image](https://github.com/RodrigoSKohl/Descomplica-a-Vida/assets/107029851/762f1998-ecdb-4d56-a3ea-17d1dc7a1550)
 
 ## Instalação Firefox[^1]
-1. Seguindo os mesmos passos do [Chrome](#instalacao-chrome), ao baixar e descompactar a extensão
+1. Seguindo os mesmos passos do [Chrome](#instalação-chrome), ao baixar e descompactar a extensão
    
 1. Acesse a área de Debugging do Firefox digitando diretamente na barra de endereço: __about:debugging__
    
