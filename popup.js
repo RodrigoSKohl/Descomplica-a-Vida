@@ -17,22 +17,29 @@ async function getCola(token, api) {
   try {
     const response = await fetch(url, options);
     const jsonResponse = await response.json();
-
-    const correctPositions = getCorrectPositions(jsonResponse.data);
+    const formatedPayload = formatPayload(api);
+    const correctPositions = getCorrectPositions(jsonResponse.data, formatedPayload);
     displayAnswers(correctPositions);
     getDiv.innerText = '✓API';
   } catch (err) {
-   getDiv.innerText = 'API NÃO COMUNICOU - ' + err;
+   getDiv.innerText = 'API NÃO COMUNICOU';
   }
 }
 
 //EXPLOIT//
 //Funçao que monta os blocos das questoes e retorna em qual posição estava true, essa posição sera a resposta 0=A, 1=B, 2=C...
 //O código funciona para qualquer quantidade de questões e respostas que as atividades possam ter
-function getCorrectPositions(data) {
+function getCorrectPositions(data, formattedPayload) {
   const blocks = {};
 
-  data.forEach(({ correct }, index) => {
+  // Cria um mapa para acesso rápido dos dados com base no ID
+  const dataMap = new Map(data.map(item => [item.id, item]));
+
+  // Ordena os dados conforme a ordem do formattedPayload
+  const orderedData = formattedPayload.map(id => dataMap.get(id)).filter(item => item); // Remove itens indefinidos
+
+  // Processa os dados ordenados para preencher os blocos
+  orderedData.forEach(({ correct }, index) => {
     const blockIndex = Math.floor(index / 5) + 1;
     const letter = String.fromCharCode(65 + (index % 5));
 
@@ -45,6 +52,21 @@ function getCorrectPositions(data) {
   });
 
   return blocks;
+}
+
+//Função que formata o payload para ser enviado na API(usado para desembaralhar as questões capturadas em data) 
+function formatPayload(payload) {
+  // Remove o prefixo 'assertions='
+  // Remove caracteres especiais e substitui por seus respectivos valores
+  let formattedPayload = payload
+    .replace('assertions=', '') // Remove o prefixo 'assertions='
+    .replace(/%3D%3D/g, '')  // Substitui todas as ocorrências de %3D%3D por ==
+    .replace(/%7C/g, '|');     // Substitui todas as ocorrências de %7C por |
+
+  // Divide a string em uma lista de IDs usando '|'
+  const ids = formattedPayload.split('|');
+
+  return ids;
 }
 //EXPLOIT//
 
@@ -89,7 +111,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             apiDiv.innerText = '✓PAYLOAD';
             await getCola(cookie.value, response.urlPart);
           } else {
-            apiDiv.innerText = 'PAYLOAD NÃO ENCONTRADO - ' + err + chrome.runtime.lastError;
+            apiDiv.innerText = 'PAYLOAD NÃO ENCONTRADO';
             setTimeout(function() {
               window.location.reload();
             }, 2000);

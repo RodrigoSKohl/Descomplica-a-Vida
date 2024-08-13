@@ -18,6 +18,9 @@
 
 
 #
+### Versão 0.4
+- No começo de 08/2024 a descomplica esta enviando o payload de resposta das questões embaralhadas, o que fez a extensão não entregar mais as alternativas corretas. Essa versão visa consertar o problema desembaralhando o response a partir do payload enviado;
+- Removido erro que acontecia de Payload não encontrado(somente na tela de extensões, não encontrava a variavel **err** no Payload)
 ### Versão 0.3
 - Removidas varáveis que não estavam mais sendo usadas(esqueci de remover na versão anterior);
 - Omitidas entradas de função sem uso;
