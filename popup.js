@@ -76,10 +76,15 @@ function displayAnswers(correctPositions) {
   answerDiv.innerHTML = '';  // Limpa o conteúdo anterior
 
   const blockTemplate = document.createElement('div');
+  if(Object.keys(correctPositions).length > 7){
+    blockTemplate.innerText = "ACESSE UMA AULA OU UMA LISTA DE REVISÃO PARA RESGATAR AS RESPOSTAS!"
+    answerDiv.appendChild(blockTemplate)
+    return
+  } 
 
   for (const [blockIndex, letters] of Object.entries(correctPositions)) {
     const blockDiv = blockTemplate.cloneNode(true);
-    blockDiv.innerText = `Pergunta ${blockIndex}: ${letters.join(', ')}`;
+    blockDiv.innerText = (blockIndex == 7) ? `Pensar e Responder: ${letters.join(', ')}` :`Pergunta ${blockIndex}: ${letters.join(', ')}`;
     answerDiv.appendChild(blockDiv);
   }
 }
