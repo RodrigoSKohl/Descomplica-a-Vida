@@ -27,16 +27,19 @@
 1. Então selecione o arquivo **manifest.json** da pasta descompactada e clique em abrir
    
 #
-### Versão 0.4
-- No começo de 08/2024 a descomplica esta enviando o payload de resposta das questões embaralhadas, o que fez a extensão não entregar mais as alternativas corretas. Essa versão visa consertar o problema desembaralhando o response a partir do payload enviado;
-- Removido erro que acontecia de Payload não encontrado(somente na tela de extensões, não encontrava a variavel **err** no Payload).
-- A partir da versao 0.4, serão realizados releases das versões.
+### Versão 0.5
+- A questão 7, referente ao pensar e responder, foi corrigida;
+- As 10 questões obtidas ao entrar em alguma matéria (referente às listas de revisão) foram retiradas. Agora, é necessário entrar em uma aula ou lista para obter as respostas.
   
 #
 
 <details>
 	<summary><b><a>Versões anteriores</a></b></summary>
-   
+	
+### Versão 0.4
+- No começo de 08/2024 a descomplica esta enviando o payload de resposta das questões embaralhadas, o que fez a extensão não entregar mais as alternativas corretas. Essa versão visa consertar o problema desembaralhando o response a partir do payload enviado;
+- Removido erro que acontecia de Payload não encontrado(somente na tela de extensões, não encontrava a variavel **err** no Payload).
+- A partir da versao 0.4, serão realizados releases das versões.
 ### Versão 0.3
 - Removidas varáveis que não estavam mais sendo usadas(esqueci de remover na versão anterior);
 - Omitidas entradas de função sem uso;
@@ -59,7 +62,6 @@
 `Firefox Browser 64 bits`
 #
 #### Bugs conhecidos:
-- Quando acessar os modulos do curso, a extensao captura um payload que retorna 10 questões ou mais(dependendo o curso). Essas questões são referentes aos exercicios das listas de revisão;
-- A sétima questão que aparece nas respostas é a resposta do P&R (somente valido para aulas onde o P&R seja de marcar).
+- Por hora nenhum, caso tenha encontrado algum, sinta-se a vontade para abrir uma Issue ou um PR para melhorias.
 
 [^1]: Caso o navegador seja reiniciado, precisa carregar a extensão novamente
