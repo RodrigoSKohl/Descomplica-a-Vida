@@ -6,7 +6,7 @@
 :warning: **Caso você esteja fazendo a atualização da extensão, antes remover a extensão antiga.**
 
 ## Instalação Chrome
-1. [Baixe o source aqui](https://github.com/RodrigoSKohl/Descomplica-a-Vida/archive/refs/tags/v0.4.zip)
+1. [Baixe o source aqui](https://github.com/RodrigoSKohl/Descomplica-a-Vida/releases/latest)
 1. Descompacte o Arquivo ZIP 
 1. Acesse a aba de extensões no navegador: __chrome://extensions/__
 1. Ative o modo desenvolvedor:
