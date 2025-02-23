@@ -5,13 +5,21 @@
     <title>Popup</title>
     <style>
 /* Estilos para os elementos e o contêiner */
+body{
+  margin: 0;
+  background: black;
+}
+.status{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
 #popupContent {
+  box-sizing: border-box ;
   font-family: monospace;
-  align-items: left;
-  width: 150px;
+  width: 200px;
   height: auto;
-  border: 1px solid #000000;
-  background-color: #01DE8A;
+  background-color: #00E88F;
   padding: 5px;
   overflow-y: auto;
 }
@@ -25,29 +33,69 @@
 
 #answers {
   margin-bottom: 5px;
-  font-size: large;
+  font-size: medium;
   line-height: 130%;
 }
 
-#tokenDiv, #apiDiv, #getDiv {
+#tokenDiv, #apiDiv, #payloadDiv {
   font-size: small;
   display: inline;
+  flex-grow: 1;
+}
+#domain {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
 }
 
 #versao {
   text-align: right;
   font-size: x-small;
 }
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#spinner svg {
+  width: 80px;
+  height: 80px;
+}
+
     </style>
   </head>
   <body>
     <div id="popupContent">
       <div id="gitDiv"><a id="githubLink" href="#">★ FAVORITE A REPO ★</a></div>
-      <div id="answers"></div>
+      <div id="answers">
+      </div>
+      <div id="spinner" style="display:none;justify-self: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="animation: rotate 1s linear infinite;">
+          <circle cx="25" cy="25" r="20" stroke="#0D7B51" stroke-width="5" fill="none"></circle>
+          <circle cx="25" cy="25" r="20" stroke="white" stroke-width="5" stroke-dasharray="125.6" stroke-dashoffset="31.4" fill="none"></circle>
+        </svg>
+      </div>
+      <div id="error" style="display:none;justify-self: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20" fill="red">
+          <path d="M10 1C4.48 1 0 5.48 0 10s4.48 9 10 9 10-4.48 10-9-4.48-9-10-9zm-1 13h2v-2h-2v2zm0-4h2V7h-2v3z"/>
+        </svg>
+      </div>
+      <div id="domain"></div>
+      <div class="status">
       <div id="tokenDiv"></div>
+      <div id="payloadDiv"></div>
       <div id="apiDiv"></div>
-      <div id="getDiv"></div>
+    </div>
       <div id="versao"></div>
+
     </div>
     <script src="popup.js"></script>
   </body>

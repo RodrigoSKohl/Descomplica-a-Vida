@@ -27,15 +27,18 @@
 1. Então selecione o arquivo **manifest.json** da pasta descompactada e clique em abrir
    
 #
-### Versão 0.5
-- A questão 7, referente ao pensar e responder, foi corrigida;
-- As 10 questões obtidas ao entrar em alguma matéria (referente às listas de revisão) foram retiradas. Agora, é necessário entrar em uma aula ou lista para obter as respostas.
+### Versão 0.6
+- Melhoria no cache das respostas (salva a resposta em localstorage para não executar requisição ao servidor da descomplica a cada acesso a extensão);
+- Nova interface gráfica;
   
 #
 
 <details>
 	<summary><b><a>Versões anteriores</a></b></summary>
-	
+
+### Versão 0.5
+- A questão 7, referente ao pensar e responder, foi corrigida;
+- As 10 questões obtidas ao entrar em alguma matéria (referente às listas de revisão) foram retiradas. Agora, é necessário entrar em uma aula ou lista para obter as respostas.
 ### Versão 0.4
 - No começo de 08/2024 a descomplica esta enviando o payload de resposta das questões embaralhadas, o que fez a extensão não entregar mais as alternativas corretas. Essa versão visa consertar o problema desembaralhando o response a partir do payload enviado;
 - Removido erro que acontecia de Payload não encontrado(somente na tela de extensões, não encontrava a variavel **err** no Payload).
