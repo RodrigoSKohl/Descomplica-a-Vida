@@ -1,15 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Descomplica a Vida",
-  "version": "0.6",
+  "version": "0.6.1",
   "description": "Extensão somente usada para fins educativos. Não utilize para colar",
   "permissions": [
     "webRequest",
     "storage",
     "activeTab",
     "cookies",
-    "tabs",
-    "localstorage"
+    "tabs"
   ],
   "host_permissions": [
     "https://*.descomplica.com.br/*",
