@@ -79,6 +79,7 @@
 #### Compatibilidade
 `Google Chrome Browser 64 bits`
 `Firefox Browser 64 bits`
+`Microsoft Edge 64 bits`
 #
 #### Bugs conhecidos:
 - Por hora nenhum, caso tenha encontrado algum, sinta-se a vontade para abrir uma Issue ou um PR para melhorias.
