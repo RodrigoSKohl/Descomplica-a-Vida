@@ -1,7 +1,8 @@
 # Descomplica-a-Vida
 ***Extensão somente usada para fins educativos. Não utilize para colar***
 
-![image](https://github.com/RodrigoSKohl/Descomplica-a-Vida/assets/107029851/63d02edf-18a7-46a7-88fd-30dd6a13cc75)
+![{25B009DE-6373-4E4A-81E6-12DF4A54B33E}](https://github.com/user-attachments/assets/72f29240-90dc-459d-96b2-843e304b3c88)
+
 
 :warning: **Caso você esteja fazendo a atualização da extensão, antes remover a extensão antiga.**
 
