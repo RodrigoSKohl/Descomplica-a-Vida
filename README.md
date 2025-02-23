@@ -26,7 +26,22 @@
 1. Clique na opção "Este Firefox", em seguida clique em "Carregar extensão temporária"
    
 1. Então selecione o arquivo **manifest.json** da pasta descompactada e clique em abrir
+
+## Instalação Edge
+1. Seguindo os mesmos passos do [Chrome](#instalação-chrome), ao baixar e descompactar a extensão
+
+1. Acesse a aba de extensões no navegador: __edge://extensions/__
+
+1. Ative o modo desenvolvedor:
    
+![{B27D5594-04CF-4CE4-8FC5-081CCC749ED6}](https://github.com/user-attachments/assets/5c5bd7a8-c836-4d29-9771-ad6b65673ff9)
+
+1. Clique em **Carregar sem pacote** e selecione a pasta descompactada
+   
+![{D7B8052C-3C0A-4784-BEFF-4F2B4C347E20}](https://github.com/user-attachments/assets/4cd130bd-e4fe-4ab5-b026-55e7232034f9)
+1. Ative a extensão estando em qualquer aula da descomplica
+
+ 
 #
 ### Versão 0.6
 - Melhoria no cache das respostas (salva a resposta em localstorage para não executar requisição ao servidor da descomplica a cada acesso a extensão);
