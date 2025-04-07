@@ -15,7 +15,10 @@
     "https://*.pegasus-pepe-legal.prd.us.descomplica.io/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": [
+      "background.ts"
+    ]
   },
   "icons": {
     "48": "icon.png",
