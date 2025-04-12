@@ -44,7 +44,7 @@
  
 #
 ### Versão 0.6.2
-- Fix do arquivo manifest no navegador firefox. Créditos: @Cixayah.
+- Fix do arquivo manifest no navegador firefox. Créditos: [@Cixayah](https://github.com/Cixayah)
   
 #
 
