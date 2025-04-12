@@ -43,15 +43,17 @@
 
  
 #
-### Versão 0.6
-- Melhoria no cache das respostas (salva a resposta em localstorage para não executar requisição ao servidor da descomplica a cada acesso a extensão);
-- Nova interface gráfica;
+### Versão 0.6.2
+- Fix do arquivo manifest no navegador firefox. Créditos: @Cixayah.
   
 #
 
 <details>
 	<summary><b><a>Versões anteriores</a></b></summary>
 
+### Versão 0.6
+- Melhoria no cache das respostas (salva a resposta em localstorage para não executar requisição ao servidor da descomplica a cada acesso a extensão);
+- Nova interface gráfica;
 ### Versão 0.5
 - A questão 7, referente ao pensar e responder, foi corrigida;
 - As 10 questões obtidas ao entrar em alguma matéria (referente às listas de revisão) foram retiradas. Agora, é necessário entrar em uma aula ou lista para obter as respostas.
