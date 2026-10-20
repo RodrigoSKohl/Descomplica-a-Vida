@@ -4,7 +4,7 @@ const dominio = 'descomplica.com.br';
 
 //Funcao que envia o GET para a url da API com o Payload capturado pelo service worker background.js + token capturado nos cookies 
 async function getCola(token, api) {
-  const url = 'https://pegasus-pepe-legal.prd.us.descomplica.io/undergrad/questions/assertions-corrections?' + api;
+  const url = 'https://pegasus-pepe-legal.paas.descomplica.com.br/undergrad/questions/assertions-corrections?' + api;
   const answerDiv = document.getElementById('answers');
   answerDiv.innerHTML = '';  
   const spinner = document.getElementById('spinner');
