@@ -43,13 +43,16 @@
 
  
 #
-### Versão 0.6.2
-- Fix do arquivo manifest no navegador firefox. Créditos: [@Cixayah](https://github.com/Cixayah)
+### Versão 0.6.3
+- Fix da url de API do Descomplica. Créditos: [@posmotion](https://github.com/posmotion)
   
 #
 
 <details>
 	<summary><b><a>Versões anteriores</a></b></summary>
+	
+### Versão 0.6.2
+- Fix do arquivo manifest no navegador firefox. Créditos: [@Cixayah](https://github.com/Cixayah)
 
 ### Versão 0.6
 - Melhoria no cache das respostas (salva a resposta em localstorage para não executar requisição ao servidor da descomplica a cada acesso a extensão);
